@@ -16,12 +16,9 @@ def place_switch(switch, i):
     i = i-1
     col = int(i % cols)
     row = int(i / cols)
-
-    print(f"{i} {cols} {i%cols} {int(i%cols)}")
-    print(f"{cols} {rows}")
-    print(f"{col} {row}")
-    print("")
+    
     switch.SetPosition(pcbnew.wxPointMils(750 * col, 750 * row))
+    switch.SetOrientationDegrees(0)
 
 def move_diode(switch, diode):
     switch_position = switch.GetPosition()
@@ -31,7 +28,7 @@ def move_diode(switch, diode):
     diode.SetPosition(new_diode_position)
     diode.SetOrientationDegrees(180)
 
-def add_track(start_position, end_position, layer = 0):
+def add_track(start_position, end_position, layer):
     track = pcbnew.PCB_TRACK(board)
     track.SetLayer(layer)
 
@@ -39,7 +36,7 @@ def add_track(start_position, end_position, layer = 0):
     track.SetEnd(end_position)
     board.Add(track)
 
-def trace_track(start_position, trace, layer = 0):
+def trace_track(start_position, trace, layer):
     for t in trace:
         end_position = start_position + t
         add_track(start_position, end_position, layer)
@@ -54,7 +51,7 @@ def connect_to_diode(switch):
         pcbnew.wxPointMils(0, -140),
         pcbnew.wxPointMils(70, -70),
         pcbnew.wxPointMils(125, 0)
-    ])
+    ], F_CU)
 
 def connect_to_row(switch):
     switch_position = switch.GetPosition()
@@ -65,17 +62,17 @@ def connect_to_row(switch):
         pcbnew.wxPointMils(660, 0),
         pcbnew.wxPointMils(20, 20),
         pcbnew.wxPointMils(0, 55),
-    ])
+    ], B_CU)
 
 def connect_to_col(switch):
     switch_position = switch.GetPosition()
-    layer = get_layer_by_name("B.Cu")
     
     start_position = switch_position + pcbnew.wxPointMils(300, -170)
-    trace_track(start_position, [pcbnew.wxPointMils(0, 690)], layer)
+    trace_track(start_position, [pcbnew.wxPointMils(0, 690)], F_CU)
 
 
-
+B_CU = get_layer_by_name("B.Cu")
+F_CU = get_layer_by_name("F.Cu")
 board = pcbnew.GetBoard()
 max_index = 54
 rows = 5
