@@ -57,10 +57,10 @@ def slash_diode_x_position(i):
 def slash_half_diode_x_position(i):
     if calc_col(i) > 5:
         # \
-        return calc_row(-((i-rows)%rows -1)) 
+        return calc_row(-((i-rows)%rows -1)) -1
     else:
         # /
-        return calc_row(i) 
+        return calc_row(i) + 1
 
     return calc_row(i)
 
@@ -99,7 +99,6 @@ def place_display():
     y = ToMils(trackball.GetPosition().y) - 1286.6
     
     display.SetPosition(wxPointMils(x, y))
-#1491-
 
 def place_mcu():
     mcu = board.FindFootprintByReference("U1")
@@ -119,7 +118,6 @@ def add_track(start_position, end_position, layer, net):
     track.SetEnd(end_position)
 
     board.Add(track)
-    print(track.GetNet().GetNetClassName())
 
 def trace_track(start_position, trace, layer, net):
     for t in trace:
@@ -127,21 +125,57 @@ def trace_track(start_position, trace, layer, net):
         add_track(start_position, end_position, layer, net)
         start_position = end_position
 
-def connect_to_diode(switch):
+def connect_to_diode(switch, i):
     switch_position = switch.GetPosition()
-    
-    start_position = switch_position + pcbnew.wxPointMils(-350, -130)
+    net = board.FindNet(f"Net-(D{i}-Pad2")
+    start_position = switch_position + pcbnew.wxPointMils(300, -230)
 
-    trace_track(start_position, [
-        pcbnew.wxPointMils(0, -140),
-        pcbnew.wxPointMils(70, -70),
-        pcbnew.wxPointMils(125, 0)
-    ], F_CU)
+    left = {
+        0:
+            [pcbnew.wxPointMils(-145, -145),
+            pcbnew.wxPointMils(-158, 0),
+            pcbnew.wxPointMils(-120, -120)],
+        1:
+            [pcbnew.wxPointMils(52, -52),
+            pcbnew.wxPointMils(0, -778),
+            pcbnew.wxPointMils(-355, -355)],
+        2:
+            [pcbnew.wxPointMils(63, -63),
+            pcbnew.wxPointMils(0, -1800),
+            pcbnew.wxPointMils(-245, -245)],
+        3:
+            [pcbnew.wxPointMils(74, -74),
+            pcbnew.wxPointMils(0, -2820),
+            pcbnew.wxPointMils(-134, -134)],
+    }
+
+    right = {
+        0:
+            [pcbnew.wxPointMils(0, -178),
+            pcbnew.wxPointMils(-86, -86)],
+        1:
+            [pcbnew.wxPointMils(24, -24),
+            pcbnew.wxPointMils(0, -937),
+            pcbnew.wxPointMils(-225, -225)],
+        2:
+            [pcbnew.wxPointMils(35, -35),
+            pcbnew.wxPointMils(0, -1717),
+            pcbnew.wxPointMils(-356, -356)],
+        3:
+            [pcbnew.wxPointMils(46, -46),
+            pcbnew.wxPointMils(0, -2500),
+            pcbnew.wxPointMils(-485, -485)],
+    }
+
+    paths = left if calc_col(i) < 6 else right
+    trace_track(start_position, paths.get(calc_row(i), []), F_CU, net)
+
 
 def connect_to_row(switch):
     switch_position = switch.GetPosition()
     
     start_position = switch_position + pcbnew.wxPointMils(150, -340)
+    
     trace_track(start_position, [
         pcbnew.wxPointMils(70, -70),
         pcbnew.wxPointMils(660, 0),
@@ -152,8 +186,8 @@ def connect_to_row(switch):
 def connect_to_col(switch, net):
     switch_position = switch.GetPosition()
     
-    start_position = switch_position + pcbnew.wxPointMils(300, -170)
-    trace_track(start_position, [pcbnew.wxPointMils(0, 690)], B_CU, net)
+    start_position = switch_position + pcbnew.wxPointMils(-350, -70)
+    trace_track(start_position, [pcbnew.wxPointMils(0, 690)], F_CU, net)
 
 
 B_CU = get_layer_by_name("B.Cu")
@@ -176,17 +210,17 @@ def main():
         
         place_switch(switch, i)
         place_diode(diode, i)
-        # connect_to_diode(switch)
+        connect_to_diode(switch, i)
 
         # don't connect last column
         # if i % cols != 0:
         # connect_to_row(switch)
         
         # don't connect last row
-        # if i % rows != 0:
-        # net = (i - 1) % cols + 1
-        # net = board.FindNet(f"Col{net}")
-        # connect_to_col(switch, net)
+        if calc_row(i) < 3:
+            net = (i - 1) % cols + 1
+            net = board.FindNet(f"Col{net}")
+            connect_to_col(switch, net)
     
     pcbnew.Refresh()
 
