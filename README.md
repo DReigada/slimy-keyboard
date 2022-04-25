@@ -8,3 +8,11 @@ a cool description for a cool keyboard
     - measure footprints properly
     - hot-swap
     - design logo in PCB
+    - check if MOSI work with ROW1
+
+### Components to check
+- [ ] Teensy
+- [ ] Display
+- [ ] trackball
+- [ ] Switch size
+- [ ] Diode
