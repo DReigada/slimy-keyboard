@@ -21,8 +21,6 @@ def is_right_side(i):
 def calc_switch_x_position(i):
     offset = 0 if is_right_side(i) else 750 * 2
     return 750 * calc_col(i) + offset
-# def set_position_with_offset(component, wxPoint):
-#     component.SetPosition(wxPoint + wxPointMils(4000, 4000))
 
 def place_switch(switch, i):
     switch.SetPosition(wxPointMils(calc_switch_x_position(i), 750 * calc_row(i)))
@@ -127,7 +125,7 @@ def trace_track(start_position, trace, layer, net):
 
 def connect_to_diode(switch, i):
     switch_position = switch.GetPosition()
-    net = board.FindNet(f"Net-(D{i}-Pad2")
+
     start_position = switch_position + pcbnew.wxPointMils(300, -230)
 
     left = {
@@ -168,7 +166,31 @@ def connect_to_diode(switch, i):
     }
 
     paths = left if calc_col(i) < 6 else right
+    net = board.FindNet(f"Net-(D{i}-Pad2")
     trace_track(start_position, paths.get(calc_row(i), []), F_CU, net)
+
+def connect_diode_to_row(diode, i):
+    diode_position = diode.GetPosition()
+    pin_position = pcbnew.wxPointMils(154, 0)
+
+    left_trace = [
+        pcbnew.wxPointMils(42, -42),
+        pcbnew.wxPointMils(665, 0),
+        pcbnew.wxPointMils(43, 43)]
+
+    right_trace = [
+        pcbnew.wxPointMils(-42, -42),
+        pcbnew.wxPointMils(-665, 0),
+        pcbnew.wxPointMils(-43, 43)]
+
+    net = board.FindNet(f"Row{calc_row(i) + 1}")
+
+    if calc_col(i) < 5:
+        start_position = diode_position + pin_position
+        trace_track(start_position, left_trace, B_CU, net)
+    elif calc_col(i) > 6:
+        start_position = diode_position - pin_position
+        trace_track(start_position, right_trace, B_CU, net)
 
 
 def connect_to_row(switch):
@@ -211,6 +233,7 @@ def main():
         place_switch(switch, i)
         place_diode(diode, i)
         connect_to_diode(switch, i)
+        connect_diode_to_row(diode, i)
 
         # don't connect last column
         # if i % cols != 0:
