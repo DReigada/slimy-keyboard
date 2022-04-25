@@ -226,24 +226,24 @@ def main():
     place_display()
     place_mcu()
 
-    for i in range(1, max_index + 1):
-        switch = board.FindFootprintByReference("K" + str(i))
-        diode = board.FindFootprintByReference("D" + str(i))
+    # for i in range(1, max_index + 1):
+    #     switch = board.FindFootprintByReference("K" + str(i))
+    #     diode = board.FindFootprintByReference("D" + str(i))
         
-        place_switch(switch, i)
-        place_diode(diode, i)
-        connect_to_diode(switch, i)
-        connect_diode_to_row(diode, i)
+    #     place_switch(switch, i)
+    #     place_diode(diode, i)
+    #     connect_to_diode(switch, i)
+    #     connect_diode_to_row(diode, i)
 
-        # don't connect last column
-        # if i % cols != 0:
-        # connect_to_row(switch)
+    #     # don't connect last column
+    #     # if i % cols != 0:
+    #     # connect_to_row(switch)
         
-        # don't connect last row
-        if calc_row(i) < 3:
-            net = (i - 1) % cols + 1
-            net = board.FindNet(f"Col{net}")
-            connect_to_col(switch, net)
+    #     # don't connect last row
+    #     if calc_row(i) < 3:
+    #         net = (i - 1) % cols + 1
+    #         net = board.FindNet(f"Col{net}")
+    #         connect_to_col(switch, net)
     
     pcbnew.Refresh()
 
