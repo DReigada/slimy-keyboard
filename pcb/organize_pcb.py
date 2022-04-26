@@ -132,19 +132,23 @@ def connect_to_diode(switch, i):
         0:
             [pcbnew.wxPointMils(-145, -145),
             pcbnew.wxPointMils(-158, 0),
-            pcbnew.wxPointMils(-120, -120)],
+            pcbnew.wxPointMils(-120, -120),
+            pcbnew.wxPointMils(-67, 0)],
         1:
             [pcbnew.wxPointMils(52, -52),
             pcbnew.wxPointMils(0, -778),
-            pcbnew.wxPointMils(-355, -355)],
+            pcbnew.wxPointMils(-355, -355),
+            pcbnew.wxPointMils(-67, 0)],
         2:
             [pcbnew.wxPointMils(63, -63),
             pcbnew.wxPointMils(0, -1800),
-            pcbnew.wxPointMils(-245, -245)],
+            pcbnew.wxPointMils(-245, -245),
+            pcbnew.wxPointMils(-67, 0)],
         3:
             [pcbnew.wxPointMils(74, -74),
             pcbnew.wxPointMils(0, -2820),
-            pcbnew.wxPointMils(-134, -134)],
+            pcbnew.wxPointMils(-134, -134),
+            pcbnew.wxPointMils(-67, 0)],
     }
 
     right = {
