@@ -8,7 +8,6 @@ a cool description for a cool keyboard
     - measure footprints properly
     - design logo in PCB
     - check if MOSI work with ROW1
-    - round corners
 
 ### footprints to check
 - [ ] Teensy
