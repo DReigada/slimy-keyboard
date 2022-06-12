@@ -5916,7 +5916,7 @@
 
   (footprint "slimy_footprints:slimy-logo" (layer "B.Cu")
     (tedit 0) (tstamp e2cf0e60-d46d-43a0-8c43-11f95b75bd32)
-    (at 215.5698 144.1196 180)
+    (at 215.5698 145.5674 180)
     (attr board_only exclude_from_pos_files exclude_from_bom)
     (fp_text reference "G***" (at 0 0) (layer "B.SilkS") hide
       (effects (font (size 1.524 1.524) (thickness 0.3)) (justify mirror))
