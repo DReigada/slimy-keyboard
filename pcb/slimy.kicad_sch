@@ -4257,148 +4257,148 @@
       (reference "#PWR06") (unit 1) (value "VCC") (footprint "")
     )
     (path "/90fc7d49-1338-4002-a89e-9f0d684c9b07"
-      (reference "D1") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D1") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/562235d6-72db-4fb4-aa29-4b8ece6b3640"
-      (reference "D2") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D2") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/57b490e1-2b12-4798-b5f3-d8e6b56678a7"
-      (reference "D3") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D3") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/3bd290de-697a-4e42-b1ea-dbf0adab2f4d"
-      (reference "D4") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D4") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/3604b420-93dc-47ee-b7d5-a003bb06dfc0"
-      (reference "D5") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D5") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/9c29749a-2040-4ec7-8955-d061799fdd2e"
-      (reference "D6") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D6") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/75c0017f-5276-4d45-817b-cc8ca152b775"
-      (reference "D7") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D7") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/a2c677da-9bbc-4d56-8a94-78b558346cb7"
-      (reference "D8") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D8") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/b8769ca6-5cae-425d-9c7e-cf3274022bee"
-      (reference "D9") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D9") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/1c08c508-32c1-4b9e-87c3-c2b04f34c0c6"
-      (reference "D10") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D10") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/7fce0f5d-29a1-41ab-a20a-337a8563f6ed"
-      (reference "D11") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D11") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/ba209416-9cff-4d0b-ba2d-e1525104e8c6"
-      (reference "D12") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D12") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/c5cf19fc-0a1b-4afa-bb4a-a98e29e391f2"
-      (reference "D13") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D13") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/00d175f1-b59d-4b5f-b1dd-8ad50e159d44"
-      (reference "D14") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D14") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/7e64ac26-94c7-4019-b604-baef77659bda"
-      (reference "D15") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D15") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/f14d0893-f5e4-439e-bf1e-e33027a0648d"
-      (reference "D16") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D16") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/a1d693ec-77e1-4350-b546-6b2a9624554b"
-      (reference "D17") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D17") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/0d84498d-6671-4b8f-aade-751194097f98"
-      (reference "D18") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D18") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/311ed815-4cad-4450-8275-ee6f490e474c"
-      (reference "D19") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D19") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/ef10fc80-0e5f-45b1-a3e2-d39d7c1f0e2b"
-      (reference "D20") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D20") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/d15d1d58-b544-4f37-b805-0203b522d4c2"
-      (reference "D21") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D21") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/9949e2fb-4483-4ee7-be52-109940fb2e93"
-      (reference "D22") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D22") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/ea17bb45-bf49-4486-8847-9b851848ca95"
-      (reference "D23") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D23") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/0f4dca86-a13f-4166-8b65-0420a7f5379e"
-      (reference "D24") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D24") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/40a13e56-187e-4cf1-a356-75dd8016b4cf"
-      (reference "D25") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D25") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/85d6321a-5bef-4003-9692-bf4bf59b33cc"
-      (reference "D26") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D26") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/abfa2e13-5731-473d-be79-112ee8ad1441"
-      (reference "D27") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D27") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/c15b2df4-9e47-47bf-96df-99c811748afb"
-      (reference "D28") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D28") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/79435d50-07a2-4498-8081-d0a0598eb946"
-      (reference "D29") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D29") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/c53742fa-30c8-49f3-9429-ef424e2e63a2"
-      (reference "D30") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D30") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/4d88f0e3-c133-4cf1-9b3b-4ca9c49a5a9e"
-      (reference "D31") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D31") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/11f515a5-b7d5-4760-90bd-788b78b0c4be"
-      (reference "D32") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D32") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/41b6740b-b15f-47a0-8589-105965a144bb"
-      (reference "D33") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D33") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/dc242fe9-e355-44e2-a065-014bff965186"
-      (reference "D34") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D34") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/16a73576-495b-4442-8e87-24f05101de88"
-      (reference "D35") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D35") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/b680ef5f-8567-4bc0-a50c-9a91345ea380"
-      (reference "D36") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D36") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/9ef8ec0f-f27f-4b47-8d3c-30db1c1d0eee"
-      (reference "D37") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D37") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/6069b47f-4d0d-4a05-ab73-49c05ef7d43a"
-      (reference "D38") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D38") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/97e4f0cd-634f-4c10-a521-77b365570b6e"
-      (reference "D39") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D39") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/98dbc2b6-6454-4eb8-b5b7-3e839a10b9fd"
-      (reference "D40") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D40") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/5439b77f-0e49-47ce-893f-3c1fd525661d"
-      (reference "D41") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D41") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/fa1b4dd8-3ffa-43ca-87b7-f1fdd21cdb25"
-      (reference "D42") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D42") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/a167b4e0-aff8-43cb-a2a0-efe301157ac2"
-      (reference "D43") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D43") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/cdb5922b-a1e4-4bdd-a2b1-fb672cd6473e"
-      (reference "D44") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D44") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/308778b9-0b07-4385-a239-0f2946a6990a"
-      (reference "D45") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D45") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/ae91bf16-dcca-4b9c-8682-183d504a3096"
-      (reference "D46") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D46") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/1397802b-cad1-47d6-be41-afa82f6d572e"
-      (reference "D47") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D47") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/1e181249-362f-4092-875e-06d28856ad96"
-      (reference "D48") (unit 1) (value "D") (footprint "my_lib:1N4148")
+      (reference "D48") (unit 1) (value "D") (footprint "my_lib:D_1N4148")
     )
     (path "/da862bae-4511-4bb9-b18d-fa60a2737feb"
       (reference "K1") (unit 1) (value "KEYSW") (footprint "my_lib:MX-1U-Hotswap-Antishear-flipped")
